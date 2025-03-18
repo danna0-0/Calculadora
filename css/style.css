@@ -14,14 +14,16 @@ body {
 }
 
 #pantalla {
-    background-color:#DEEFE7 ;
-    width: 85%;
-    height: 50px;
-    margin: 10px auto;
-    padding: 9%;
+    background-color: #DEEFE7; /* Mantén tu color actual */
     border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #999;
     text-align: right;
     font-size: 24px;
+    margin-bottom: 15px;
+    width: 85%;
+    margin: 30px auto;
+    border-radius: 5px;
 }
 
 #contenedor {
@@ -47,4 +49,66 @@ button.btn-secondary {
 button.btn-secondary:hover {
     background-color: #5a6268;
     border-color: #545b62;
+}
+
+.equals-button, .camera-button {
+    grid-column: span 2; /* Si usas un diseño de cuadrícula */
+}
+
+#camera-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 10;
+}
+
+#camera-video {
+    max-width: 80%;
+    max-height: 70%;
+    margin-bottom: 20px;
+}
+
+#camera-controls {
+    display: flex;
+    gap: 10px;
+}
+
+#camera-controls button {
+    padding: 10px 20px;
+    background-color: #7d8287;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#camera-controls button:hover {
+    background-color: #666b70;
+}
+
+#expression, #result {
+    width: 100%;
+    padding: 5px 10px;
+    border: none;
+    font-size: 20px;
+    text-align: right;
+    background-color:  #DEEFE7; 
+    /*border-bottom: 1px dotted #ccc;*/
+}
+
+#expression {
+    color: #555555;   
+    
+}
+#result {
+    font-weight: bold;
+    color: #000;
 }
