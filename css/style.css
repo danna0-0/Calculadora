@@ -112,3 +112,49 @@ button.btn-secondary:hover {
     font-weight: bold;
     color: #000;
 }
+
+
+
+.equals-button, .voz-button {
+    grid-column: span 2;
+}
+
+.voz-button.listening {
+    background-color: #FF4444;
+    animation: pulse 1.5s infinite;
+}
+#voice-helper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+.voice-instructions h3 {
+    margin-top: 0;
+}
+
+.voice-instructions ul {
+    padding-left: 20px;
+}
+
+.voice-instructions button {
+    display: block;
+    margin: 15px auto 0;
+    padding: 8px 16px;
+    background-color: #003049;
+}
+
+.hidden {
+    display: none;
+}
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
